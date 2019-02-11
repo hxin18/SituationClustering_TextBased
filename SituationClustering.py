@@ -43,7 +43,7 @@ class SituationClustering():
 # might need to be improved
 input_value = ''
 output_value = ''
-stopPoint = 0
+stop_point = 0
 model_name = ''
 if len(sys.argv) >= 3:
     if sys.argv[1] == '-input' and sys.argv[2]:
@@ -66,5 +66,5 @@ if len(sys.argv) >= 3:
                         print('Please specify the Clustering model.')
 
 
-SC = SituationClustering(input_path=input_value, output_path=output_value, stop_point=stopPoint, model_name=model_name)
+SC = SituationClustering(input_path=input_value, output_path=output_value, stop_point=int(stop_point), model_name=model_name)
 SC.run()
