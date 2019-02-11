@@ -34,8 +34,8 @@ class EvolutionaryClustering_original(object):
             self.embedding_model = KeyedVectors.load_word2vec_format('crisisNLP_word_vector.bin', binary=True)
             self.index2word_set = set(self.embedding_model.index2word)
 
-            self.text_original = 'text_original'
-            self.tmstp = 'tmstp'
+            self.text_original = 'originalText'
+            self.tmstp = 'createdAt'
 
     @staticmethod
     def remove(text):
@@ -131,6 +131,7 @@ class EvolutionaryClustering_original(object):
             for k, v in each_set.items():
                 EvoluCO = {}
                 EvoluCO['cluster' + str(num)] = v['docs']
-                EvoluCO['preferred_name'] = 'To be defined'
+                # EvoluCO['preferred_name'] = 'To be defined'
                 self.f.write(json.dumps(EvoluCO) + '\n')
                 num +=1
+        self.f.close()

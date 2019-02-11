@@ -46,8 +46,8 @@ class DynamicClustering(object):
             self.embedding_model = KeyedVectors.load_word2vec_format('crisisNLP_word_vector.bin', binary=True)
             self.index2word_set = set(self.embedding_model.index2word)
 
-            self.text_original = 'text_original'
-            self.tmstp = 'tmstp'
+            self.text_original = 'originalText'
+            self.tmstp = 'createdAt'
 
     @staticmethod
     def remove(text):
@@ -243,12 +243,13 @@ class DynamicClustering(object):
             for k, v in each_set.items():
                 DC_result = {}
                 DC_result['cluster' + str(num)] = v['docs']
-                DC_result['preferred_name'] = 'To be defined'
+                # DC_result['preferred_name'] = 'To be defined'
                 self.f.write(json.dumps(DC_result)+'\n')
                 num += 1
         for tweet in self.outlier_cluster_set['docs']:
             DC_result = {}
-            DC_result['cluster' + str(num)] = tweet
-            DC_result['preferred_name'] = 'To be defined'
+            DC_result['cluster' + str(num)] = [tweet]
+            # DC_result['preferred_name'] = 'To be defined'
             self.f.write(json.dumps(DC_result) + '\n')
             num += 1
+        self.f.close()
