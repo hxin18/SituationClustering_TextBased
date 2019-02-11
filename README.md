@@ -34,11 +34,11 @@ There is another optional parameter, -stop_point, which is used to specify the n
 Last parameter is to specify the model name you'd use: One is "DynamicClustering", the other is "EvolutionaryClustering".
 
 ### Example
-If all tweets need to be processed, commend in terminal should be like this:
+If all tweets need to be processed, command in terminal should be like this:
 
 	python SituationClustering.py -input sample.jl -output output.jl -model_name DynamicClustering [or EvolutionaryClustering]
 
-If one wants to set stop point to run the code, commend in terminal should be like this:
+If one wants to set stop point to run the code, command in terminal should be like this:
 
 	python SituationClustering.py -input sample.jl -output output.jl  -stop_point 1000 -model_name DynamicClustering [or EvolutionaryClustering]
 
