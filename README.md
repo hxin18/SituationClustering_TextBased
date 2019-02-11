@@ -38,9 +38,9 @@ If all tweets need to be processed, commend in terminal should be like this:
 
 	python SituationClustering.py -input sample.jl -output output.jl -model_name DynamicClustering [or EvolutionaryClustering]
 
-	If one wants to set stop point to run the code, commend in terminal should be like this:
+If one wants to set stop point to run the code, commend in terminal should be like this:
 
-		python SituationClustering.py -input sample.jl -output output.jl  -stop_point 1000 -model_name DynamicClustering [or EvolutionaryClustering]
+	python SituationClustering.py -input sample.jl -output output.jl  -stop_point 1000 -model_name DynamicClustering [or EvolutionaryClustering]
 
 
 ## Sample Format
