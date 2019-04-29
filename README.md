@@ -9,7 +9,7 @@ Models are implemented under python 2.7.*. There are some denpendency and packag
 
 One pre-trained Word2Vec word embedding is used in models here. Essentially, this word embedding was trained on tweets of 19 natural and man-made disasters datasets, which is a relatively general word wmbedding for processing tweets during diasters.
 
-Just simply refer to this link to download and put it under the SituationClustering_TextBased folder.
+Just simply refer to this link to download and put it under the SituationClustering_TextBased folder(this folder).
 
 *   [CrisisWordEmbedding](http://crisisnlp.qcri.org/data/lrec2016/crisisNLP_word2vec_model_v1.2.zip) - crisisNLP_word_vector
 
